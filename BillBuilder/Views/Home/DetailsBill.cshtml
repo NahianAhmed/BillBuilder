@@ -1,0 +1,30 @@
+﻿@model CURD.Models.UserBill
+
+@{
+    ViewData["Title"] = "DetailsBill";
+}
+
+<h1>DetailsBill</h1>
+
+<div>
+    <h4>UserBill</h4>
+    <hr />
+    <dl class="row">
+        <dt class = "col-sm-2">
+            @Html.DisplayNameFor(model => model.bill)
+        </dt>
+        <dd class = "col-sm-10">
+            @Html.DisplayFor(model => model.bill)
+        </dd>
+        <dt class = "col-sm-2">
+            @Html.DisplayNameFor(model => model.userID)
+        </dt>
+        <dd class = "col-sm-10">
+            @Html.DisplayFor(model => model.userID)
+        </dd>
+    </dl>
+</div>
+<div>
+    <a asp-action="EditBill" asp-route-id="@Model.id">Edit</a> |
+    <a asp-action="BillList">Back to List</a>
+</div>
